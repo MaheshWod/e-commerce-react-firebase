@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Layout from './Layout';
 
 const Order = () => {
-    const [orders, setOrders] = useState([
+    const [orders] = useState([
         { orderId: '001',
          customerName: 'manish',
          email: 'madfjljflsfj@gmail.com',

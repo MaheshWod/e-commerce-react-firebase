@@ -4,7 +4,7 @@ import { FcElectronics } from "react-icons/fc";
 
 
 const Category = () => {
-    const [category, setCategory] = useState(
+    const [category] = useState(
         [
             {
                 title: "Electronics"

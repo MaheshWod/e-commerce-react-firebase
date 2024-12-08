@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useEffect } from 'react';
 import NavLayout from './NavLayout'
 import { ImProfile } from "react-icons/im";
-import { IoSaveSharp } from "react-icons/io5";
 import firebaseAppConfig from '../util/firebase-config';
 import { onAuthStateChanged, getAuth,updateProfile } from 'firebase/auth';
 import { getFirestore, addDoc, collection, getDocs, query, where, updateDoc, doc } from 'firebase/firestore'
@@ -33,8 +32,8 @@ const Profile = () => {
     }) 
     const [isAddress,setIsAddress] = useState(false)
     const [docId,setDocId] = useState(null)
-    const [isUpdated, setIsUpdated] = useState(false)
-    const [uploading, setUploading] = useState(false)
+    const [isUpdated] = useState(false)
+    // const [uploading, setUploading] = useState(false)
 
 
     
@@ -50,7 +49,7 @@ const Profile = () => {
                 navigate('./login')
             }
         })
-    },[])
+    },[navigate])
 
     useEffect(()=>{
         const req = async ()=>{
@@ -85,7 +84,7 @@ const Profile = () => {
             }
         }
         req()
-    },[session, isUpdated])
+    },[session,isUpdated])
 
     console.log(session)
     
@@ -205,7 +204,7 @@ const setAddress = async(e) =>{
                     </div>
                     <hr className='my-3'></hr>
                     <div className='w-24 h-24 mx-auto rounded-full relative'>
-                        <img src='images/avat1.jpg' className='w-fit mx-auto rounded-full' />
+                        <img src='images/avat1.jpg' className='w-fit mx-auto rounded-full' alt='' />
                         <input type='file' accept='image/*' className=' mb-5 rounded-full opacity-0 top-0 left-0 w-full h-full absolute' />
                     </div>
 

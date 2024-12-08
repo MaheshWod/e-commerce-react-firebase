@@ -12,7 +12,8 @@ const Login = () => {
     const navigate = useNavigate()
     const [passwordType, setPasswordType] = useState("password")
     const [error, setError] = useState(null)
-    const [loader, setLoader] = useState(false)
+    const [ setLoader] = useState(false)
+    // const [loader, setLoader] = useState(false)
     const [formValue, setFormValue] = useState({
         email: '',
         password: ''

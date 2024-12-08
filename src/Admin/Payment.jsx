@@ -120,7 +120,7 @@ import React, { useState } from 'react';
 import Layout from './Layout';
 
 const Payment = () => {
-  const [customers, setCustomers] = useState([
+  const [customers] = useState([
     {
       customerName: 'manish',
       email: 'madfjljflsfj@gmail.com',
