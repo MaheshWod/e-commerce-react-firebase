@@ -10,7 +10,7 @@ import Order from './Admin/Order';
 import Cart from './Components/Cart';
 import Profile from './Components/Profile';
 import Failed from './Components/Failed';
-import Cloudinary from './Components/Cloudinary';
+// import Cloudinary from './Components/Cloudinary';
 import Payment from './Admin/Payment';
 import Category from './Admin/Category';
 import Setting from './Admin/Setting';
@@ -41,7 +41,7 @@ function App() {
         <Route  path='/setting' element ={<Setting/>}/>
 
 
-        <Route path='/cloud' element = {<Cloudinary/>}/>
+        {/* <Route path='/cloud' element = {<Cloudinary/>}/> */}
         <Route path='*' element={<Failed />} />
 
       </Routes>

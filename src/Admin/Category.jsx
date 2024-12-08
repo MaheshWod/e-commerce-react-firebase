@@ -33,6 +33,7 @@ const Category = () => {
             },
         ]
     )
+
     return (
         <>
             <NavLayout>
