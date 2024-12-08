@@ -80,7 +80,7 @@ const Cart = () => {
                             {
                                 products.map((items, index) => (
                                     <div key={index} className='md:flex gap-4'>
-                                        <img src={items.imageUrl} className='w-[100px]  border border-2 border-white shadow rounded' />
+                                        <img src={items.imageUrl} className='w-[100px]  border border-2 border-white shadow rounded'alt='' />
                                         <div>
                                             <h1 className='font-semibold capitalize text-lg'>{items.title}</h1>
                                             <div className='flex flex-col gap-4'>

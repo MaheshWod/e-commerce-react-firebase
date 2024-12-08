@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
 
     const menus = [
         {
-            label: 'Dashboard',
+            label: 'Home',
             icons: <MdDashboard />,
             Link: '/'
         },

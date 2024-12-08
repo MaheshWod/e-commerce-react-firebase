@@ -134,7 +134,7 @@ const NavLayout = ({ children }) => {
                         {
                             session && (
                                 <button className="relative" onClick={() => setAccountMenu(!accountMenu)}>
-                                    <img src="/images/avat1.jpg" className="w-10 h-10 rounded-full" />
+                                    <img src="/images/avat1.jpg" className="w-10 h-10 rounded-full" alt=''/>
                                     {accountMenu && (
                                         <div className=" flex flex-col w-[120px]  bg-slate-200 fixed top-23 right-24 shadow-1xl z-50">
                                         {/* LogOUt Box */}

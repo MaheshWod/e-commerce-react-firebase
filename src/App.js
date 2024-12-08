@@ -9,7 +9,6 @@ import Product from './Admin/Product';
 import Order from './Admin/Order';
 import Cart from './Components/Cart';
 import Profile from './Components/Profile';
-import Practice from './Components/Practice';
 import Failed from './Components/Failed';
 import Cloudinary from './Components/Cloudinary';
 import Payment from './Admin/Payment';
@@ -25,7 +24,6 @@ function App() {
 
         </Route>
 
-        <Route path='/Practice' element={<Practice />} />
 
         <Route path='/cart' element={<Cart />} />
 

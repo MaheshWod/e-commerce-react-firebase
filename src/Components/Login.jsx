@@ -9,7 +9,7 @@ const auth = getAuth(firebaseAppConfig)
 
 const Login = () => {
 
-const navigate = useNavigate()
+    const navigate = useNavigate()
     const [passwordType, setPasswordType] = useState("password")
     const [error, setError] = useState(null)
     const [loader, setLoader] = useState(false)
@@ -17,15 +17,14 @@ const navigate = useNavigate()
         email: '',
         password: ''
     })
-    const login = async (e)=>{
+    const login = async (e) => {
         try {
             e.preventDefault()
             setLoader(true)
             await signInWithEmailAndPassword(auth, formValue.email, formValue.password)
             navigate("/")
         }
-        catch(err)
-        {
+        catch (err) {
             setError("Invalid credentials provided")
         }
         finally {
@@ -33,7 +32,7 @@ const navigate = useNavigate()
         }
     }
 
-    const handleChange = (e)=>{
+    const handleChange = (e) => {
         const input = e.target
         const name = input.name
         const value = input.value
@@ -49,41 +48,41 @@ const navigate = useNavigate()
         <>
             <NavLayout>
                 <div className='grid md:grid-cols-2 md:h-screen overflow-hidden  m-3'>
-                    <img src='/images/signup.jpg' className='md:w-full md:h-full md:object-cover h-6/12 object-cover ' />
+                    <img src='/images/signup.jpg' className='md:w-full md:h-full md:object-cover h-6/12 object-cover ' alt='' />
 
 
                     <div className='flex flex-col md:px-8 md:mt-[95px] mt-0 '>
                         <h2 className='md:text-4xl text-2xl md:font-bold font-semibold'>LogIn</h2>
                         <p className='md:text-lg textgrey-600'> Enter the Detail your profile</p>
                         <form onSubmit={login}
-                        className='md:mt-8 md:space-y-6 space-y-3'>
-                           
+                            className='md:mt-8 md:space-y-6 space-y-3'>
+
                             <div className='flex flex-col'>
                                 <label className='font-semibold md:text-lg mb-1'>Email</label>
                                 <input required
-                                onChange={handleChange}
-                                name='email'
-                                type= 'email'
-                                placeholder='Enter the your Email'
-                                className='md:p-3 p-2 border border-grey-600 rounded'/>
+                                    onChange={handleChange}
+                                    name='email'
+                                    type='email'
+                                    placeholder='Enter the your Email'
+                                    className='md:p-3 p-2 border border-grey-600 rounded' />
                             </div>
                             <div className='flex flex-col'>
                                 <label className='font-semibold md:text-lg mb-1'>Password</label>
                                 <input required
-                                onChange={handleChange}
-                                name='password'
-                                type={passwordType}
-                                placeholder='**********************'
-                                className='md:p-3 p-2 border border-grey-600 rounded'/>
+                                    onChange={handleChange}
+                                    name='password'
+                                    type={passwordType}
+                                    placeholder='**********************'
+                                    className='md:p-3 p-2 border border-grey-600 rounded' />
 
-<button onClick={()=>setPasswordType(passwordType === "password" ? "text" : "password")} type="button" className="absolute top-11 right-4 w-8 h-8 rounded-full hover:bg-blue-200 hover:text-blue-600">
-                             {
-                                 passwordType === "password" ? 
-                                 <i className="ri-eye-line"></i> 
-                                 : 
-                                 <i className="ri-eye-off-line"></i>
-                             }
-                        </button>
+                                <button onClick={() => setPasswordType(passwordType === "password" ? "text" : "password")} type="button" className="absolute top-11 right-4 w-8 h-8 rounded-full hover:bg-blue-200 hover:text-blue-600">
+                                    {
+                                        passwordType === "password" ?
+                                            <i className="ri-eye-line"></i>
+                                            :
+                                            <i className="ri-eye-off-line"></i>
+                                    }
+                                </button>
 
                             </div>
 
@@ -93,21 +92,21 @@ const navigate = useNavigate()
                         {/* <div className='mt-2'>
                             Don't have any account ? <Link to = '/signup' className='font-semibold p-1 text-blue-600'>Register...</Link>
                         </div> */}
-                        
+
 
                         <div className="mt-2">
-                     Don`t have an account ? <Link to="/signup" className="text-blue-600 font-semibold">Register now</Link>
-                 </div>
+                            Don`t have an account ? <Link to="/signup" className="text-blue-600 font-semibold">Register now</Link>
+                        </div>
 
-                 {
-                     error && 
-                     <div className="flex justify-between items-center mt-2 bg-rose-600 p-3 rounded shadow text-white font-semibold animate__animated animate__pulse">
-                         <p>{error}</p>
-                         <button onClick={()=>setError(null)}>
-                             <i className="ri-close-line"></i>
-                         </button>
-                     </div>
-                 }
+                        {
+                            error &&
+                            <div className="flex justify-between items-center mt-2 bg-rose-600 p-3 rounded shadow text-white font-semibold animate__animated animate__pulse">
+                                <p>{error}</p>
+                                <button onClick={() => setError(null)}>
+                                    <i className="ri-close-line"></i>
+                                </button>
+                            </div>
+                        }
                     </div>
                 </div>
             </NavLayout>
@@ -171,7 +170,7 @@ export default Login
 //                 <form className="mt-8 space-y-6" onSubmit={login}>
 //                     <div className="flex flex-col">
 //                         <label className="font-semibold text-lg mb-1">Email id</label>
-//                         <input 
+//                         <input
 //                             onChange={handleChange}
 //                             required
 //                             type="email"
@@ -183,7 +182,7 @@ export default Login
 
 //                     <div className="flex flex-col relative">
 //                         <label className="font-semibold text-lg mb-1">Password</label>
-//                         <input 
+//                         <input
 //                             onChange={handleChange}
 //                             required
 //                             type={passwordType}
@@ -193,15 +192,15 @@ export default Login
 //                         />
 //                         <button onClick={()=>setPasswordType(passwordType === "password" ? "text" : "password")} type="button" className="absolute top-11 right-4 w-8 h-8 rounded-full hover:bg-blue-200 hover:text-blue-600">
 //                             {
-//                                 passwordType === "password" ? 
-//                                 <i className="ri-eye-line"></i> 
-//                                 : 
+//                                 passwordType === "password" ?
+//                                 <i className="ri-eye-line"></i>
+//                                 :
 //                                 <i className="ri-eye-off-line"></i>
 //                             }
 //                         </button>
 //                     </div>
 //                     {
-//                         loader ? 
+//                         loader ?
 //                         <h1 className="text-lg font-semibold text-gray-600">Loading...</h1>
 //                         :
 //                         <button className="py-3 px-8 rounded bg-blue-600 text-white font-semibold hover:bg-rose-600">Login</button>
@@ -212,7 +211,7 @@ export default Login
 //                 </div>
 
 //                 {
-//                     error && 
+//                     error &&
 //                     <div className="flex justify-between items-center mt-2 bg-rose-600 p-3 rounded shadow text-white font-semibold animate__animated animate__pulse">
 //                         <p>{error}</p>
 //                         <button onClick={()=>setError(null)}>
