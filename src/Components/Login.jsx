@@ -12,8 +12,8 @@ const Login = () => {
     const navigate = useNavigate()
     const [passwordType, setPasswordType] = useState("password")
     const [error, setError] = useState(null)
-    const [ setLoader] = useState(false)
-    // const [loader, setLoader] = useState(false)
+    // const [ setLoader] = useState(false)
+    const [loader, setLoader] = useState(false)
     const [formValue, setFormValue] = useState({
         email: '',
         password: ''
@@ -108,6 +108,11 @@ const Login = () => {
                                 </button>
                             </div>
                         }
+                        {loader && (
+              <div className="flex justify-center items-center mt-4">
+                <div className="loader"></div> {/* Add a loader component or animation here */}
+              </div>
+            )}
                     </div>
                 </div>
             </NavLayout>

@@ -7,11 +7,13 @@ import firebaseAppConfig from '../util/firebase-config';
 import { getFirestore, addDoc, collection, getDocs, updateDoc, doc, deleteDoc } from 'firebase/firestore';
 import Swal from 'sweetalert2';
 import axios from 'axios';
+// import { useNavigate } from 'react-router-dom';
 // import { text } from '@cloudinary/url-gen/qualifiers/source';
 
 const db = getFirestore(firebaseAppConfig);
 
 const Product = () => {
+  // const navigate = useNavigate()
   const [products, setProducts] = useState([]);
   const [productFormValue, setProductFormValue] = useState(
     { title: '', 
@@ -207,7 +209,8 @@ const handleEditProduct = async (e) => {
     // Reset form and editing state
     setProductFormValue({ title: '', description: '', price: '', discount: '' });
     setEditingProduct(null);
-    // setProductData(false);
+    setProductData(false);
+    // setProductData le save hune bittikai hatxa
 
     // Show success notification
     Swal.fire({
@@ -252,6 +255,8 @@ const handleEditProduct = async (e) => {
                 )}
                 <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, index)} className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer" />
               </div>
+
+
               <div className="p-4">
               {/* Edit And Delete button wala part pani xa yasma */}
                 <div className='flex justify-between items-center'>

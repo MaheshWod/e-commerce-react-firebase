@@ -86,7 +86,7 @@ const Profile = () => {
         req()
     },[session,isUpdated])
 
-    console.log(session)
+    // console.log(session)
     
      const saveProfileInfo = async (e)=>{
         e.preventDefault()
@@ -177,6 +177,10 @@ const setAddress = async(e) =>{
     
 })
  }
+// error show garna lagekale use gareko formvalue and addressFormvalue ko lagi
+// useEffect(() => {
+//     console.log(addressFormValue, formValue);
+// }, [addressFormValue, formValue]); // This is fine as long as it doesn't result in a loop.
 
 
 
