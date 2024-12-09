@@ -287,7 +287,7 @@ const handleEditProduct = async (e) => {
               <button className="absolute md:top-2 right-3" onClick={() => setProductData(false)}>
                 <IoMdCloseCircleOutline className="md:text-xl text-black" />
               </button>
-              <h1 className="md:text-lg font-semibold hover:bg-blue0">New Product</h1>
+              <h1 className="md:text-lg font-semibold ">New Product</h1>
               <form 
               className="grid grid-cols-2 md:gap-6 gap-3 md:mt-4" 
               onSubmit={editingProduct ? handleEditProduct :createProduct}>
@@ -328,7 +328,7 @@ const handleEditProduct = async (e) => {
                 value={productFormValue.description} />
                 
                    
-                   {editingProduct ? <button className="bg-green-600 text-white rounded px-4 py-2">Save</button>: <button className="bg-indigo-600 text-white rounded px-4 py-2 hover:bg-green-600">Submit</button>}
+                   {editingProduct ? <button className="bg-green-700 font-semibold hover:text-black hover:bg-green-400 text-white rounded px-4 py-2">Save</button>: <button className="bg-indigo-600 text-white rounded px-4 py-2 hover:bg-green-600">Submit</button>}
                 
               </form>
             </div>
