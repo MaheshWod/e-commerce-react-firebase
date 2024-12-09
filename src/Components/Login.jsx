@@ -108,7 +108,8 @@ const Login = () => {
                                 </button>
                             </div>
                         }
-                        {loader && (
+                        {
+                            loader && (
               <div className="flex justify-center items-center mt-4">
                 <div className="loader"></div> {/* Add a loader component or animation here */}
               </div>
