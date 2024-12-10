@@ -240,16 +240,16 @@ const handleEditProduct = async (e) => {
           </button>
         </div>
 
-        <div className="grid md:grid-cols-4 grid-cols-1 gap-4 mt-3 ">
+        <div className="grid md:grid-cols-4 grid-cols-1 gap-4 mt-3  ">
 
           {
             products.map((item, index) => ( 
-            <div key={index} className="bg-white rounded-md shadow-lg">
+            <div key={index} className="bg-white rounded-md shadow-lg ">
               <div className="relative">
                 {item.imageUrl ? (
-                  <img src={item.imageUrl} alt={item.title || "Product"} className="rounded-t-md h-[300px] w-full object-cover" />
+                  <img src={item.imageUrl} alt={item.title || "Product"} className="rounded-t-md md:h-[400px] h-[300px] px-2 w-full object-cover" />
                 ) : (
-                  <div className="h-[300px] w-full bg-gray-300 flex items-center justify-center">
+                  <div className="md:h-[400px] h-[300px] w-full bg-gray-300 flex items-center justify-center">
                     <span>Upload Image</span>
                   </div>
                 )}

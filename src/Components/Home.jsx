@@ -72,11 +72,11 @@ snapshot.forEach((doc)=>{
           <p className="text-grey-600 text-center md:w-7/12 mx-auto mt-1 md:mb-12 mb-6">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
           </p>
-          <div className="md:w-11/12 grid md:grid-cols-4 grid-cols-1 gap-6 md:gap-12 mx-auto">
+          <div className="md:w-11/12  grid md:grid-cols-4 grid-cols-1 gap-6 md:gap-12 mx-auto">
             {
               product.map((items, index) => (
                 <div key={index} className="bg-white rounded-md shadow-lg overflow-hidden">
-                  <img src={items.imageUrl} className="rounded-t-md h-[440px] w-full object-cover" alt={items.title} />
+                  <img src={items.imageUrl} className="rounded-t-md h-[300px] md:h-[400px] w-full object-cover px-2" alt={items.title} />
                   <div className="p-4">
                     <h1 className="font-semibold text-md">{items.title}</h1>
                     <p className="text-grey-600">{items.description.slice(0, 20)}...</p>

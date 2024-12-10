@@ -45,11 +45,7 @@ const Layout = ({ children }) => {
             icons: <FaBorderStyle />,
             Link: '/category'
         },
-        {
-            label: 'Order',
-            icons: <FaBorderStyle />,
-            Link: '/order'
-        },
+      
         {
             label: 'Payment',
             icons: <MdOutlinePayment />,
